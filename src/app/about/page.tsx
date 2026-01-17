@@ -151,7 +151,7 @@ export default function About() {
               target="_blank"
               className="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-all text-center font-semibold"
             >
-              Visit Our Portfolio
+              Visit Our Website
             </Link>
             <Link
               href="mailto:dataversetechnologies6@gmail.com"

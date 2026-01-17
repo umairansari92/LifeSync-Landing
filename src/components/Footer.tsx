@@ -43,7 +43,7 @@ export default function Footer() {
               <Link
                 href="https://dataversetechnologies.vercel.app/"
                 target="_blank"
-                title="Portfolio"
+                title="Company Website"
                 className="inline-flex items-center justify-center w-10 h-10 bg-slate-800 hover:bg-amber-500/20 border border-amber-500/30 rounded-lg transition-all"
               >
                 <Github size={18} className="text-amber-400" />
