@@ -145,6 +145,43 @@ export default function About() {
           <p className="text-slate-300 mb-6">
             LifeSync is developed and maintained by Dataverse Technologies, a team dedicated to creating innovative solutions for life management and digital transformation.
           </p>
+
+          {/* Company Info Grid */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div>
+              <h3 className="text-lg font-bold text-amber-300 mb-3">About Dataverse Technologies</h3>
+              <p className="text-slate-300 text-sm mb-4">
+                Dataverse Technologies is a cutting-edge software development company focused on building solutions that make life easier through technology. We specialize in creating all-in-one applications that integrate multiple aspects of personal and professional management.
+              </p>
+              <p className="text-slate-300 text-sm">
+                With a passion for innovation and user experience, we deliver products that are not just functional but also beautiful and intuitive to use.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold text-amber-300 mb-3">Our Expertise</h3>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-amber-400">•</span>
+                  <span>Full-Stack Web Development</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-400">•</span>
+                  <span>Mobile-First Design</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-400">•</span>
+                  <span>Real-Time Data Integration</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-400">•</span>
+                  <span>Cloud Infrastructure & Deployment</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Call to Action */}
           <div className="flex flex-col md:flex-row gap-4">
             <Link
               href="https://dataversetechnologies.vercel.app/"
