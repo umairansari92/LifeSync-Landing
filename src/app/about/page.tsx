@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Users, Zap, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -141,10 +142,23 @@ export default function About() {
 
         {/* Built By Section */}
         <section className="mb-20 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/20 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-white mb-4">Built By Dataverse Technologies</h2>
-          <p className="text-slate-300 mb-6">
-            LifeSync is developed and maintained by Dataverse Technologies, a team dedicated to creating innovative solutions for life management and digital transformation.
-          </p>
+          <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
+            <div className="flex-shrink-0">
+              <Image
+                src="/logo.png"
+                alt="LifeSync Logo"
+                width={120}
+                height={120}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold text-white mb-4">Built By Dataverse Technologies</h2>
+              <p className="text-slate-300 mb-4">
+                LifeSync is developed and maintained by Dataverse Technologies, a team dedicated to creating innovative solutions for life management and digital transformation.
+              </p>
+            </div>
+          </div>
 
           {/* Company Info Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
