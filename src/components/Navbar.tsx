@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -25,9 +26,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-amber-500 rounded-lg flex items-center justify-center">
-            <span className="text-black font-bold">LS</span>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="LifeSync Logo"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+          />
           <span className="font-bold text-white hidden sm:inline">LifeSync</span>
         </Link>
 
