@@ -10,9 +10,9 @@ interface BlogPostProps {
 
 const blogPosts: Record<string, any> = {
   "financial-habits": {
-    title: "5 Financial Habits That Will Transform Your Life",
+    title: "Building Wealth Through Daily Money Habits",
     author: "LifeSync Team",
-    date: "January 15, 2026",
+    date: "January 18, 2026",
     category: "Finance",
     emoji: "💰",
     image: "💰",
