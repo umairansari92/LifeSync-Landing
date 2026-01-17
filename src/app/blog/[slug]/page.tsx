@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, User, Share2, ArrowRight } from "lucide-react";
 
 interface BlogPostProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Blog posts database with full content
@@ -452,7 +452,8 @@ This is how permanent change happens.
 };
 
 export async function generateMetadata({ params }: BlogPostProps): Promise<Metadata> {
-  const post = blogPosts[params.slug];
+  const { slug } = await params;
+  const post = blogPosts[slug];
   return {
     title: post?.title || "Blog Post",
     description: post?.excerpt || "LifeSync Blog",
@@ -465,8 +466,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: BlogPostProps) {
-  const post = blogPosts[params.slug];
+export default async function BlogPost({ params }: BlogPostProps) {
+  const { slug } = await params;
+  const post = blogPosts[slug];
 
   if (!post) {
     return (
@@ -586,7 +588,7 @@ export default function BlogPost({ params }: BlogPostProps) {
           <h3 className="text-2xl font-bold text-white mb-8">More Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {Object.entries(blogPosts)
-              .filter(([slug]) => slug !== params.slug)
+              .filter(([s]) => s !== slug)
               .slice(0, 2)
               .map(([slug, article]) => (
                 <Link
