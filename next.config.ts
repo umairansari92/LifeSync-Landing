@@ -60,6 +60,11 @@ const nextConfig: NextConfig = {
         destination: '/terms',
         permanent: true,
       },
+      {
+        source: '/cookie-policy-old',
+        destination: '/cookie-policy',
+        permanent: true,
+      },
       // App redirects
       {
         source: '/app',
