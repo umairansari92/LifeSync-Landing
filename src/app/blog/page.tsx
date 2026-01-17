@@ -11,10 +11,10 @@ const articles = [
   {
     id: 1,
     slug: "financial-habits",
-    title: "5 Financial Habits That Will Transform Your Life",
+    title: "5 Financial Habits Experts Swear By, Why They Work, and How LifeSync Makes Them Stick",
     excerpt:
-      "Learn the proven financial habits that can help you build wealth, reduce stress, and achieve your goals faster than you thought possible.",
-    date: "January 15, 2026",
+      "“Pay yourself first.” That short line sums up decades of advice from investors and personal finance experts. These are not tricks. They are repeatable habits that produce results.",
+    date: "January 18, 2026",
     category: "Finance",
     image: "💰",
   },
