@@ -96,12 +96,6 @@ const nextConfig: NextConfig = {
     };
   },
 
-  // Webpack optimization
-  webpack: (config, { isServer }) => {
-    config.optimization.minimize = true;
-    return config;
-  },
-
   // Environment variables
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'https://app-lifesynchub.vercel.app',
