@@ -139,6 +139,29 @@ export default function About() {
           </ul>
         </section>
 
+        {/* Built By Section */}
+        <section className="mb-20 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/20 rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-white mb-4">Built By Dataverse Technologies</h2>
+          <p className="text-slate-300 mb-6">
+            LifeSync is developed and maintained by Dataverse Technologies, a team dedicated to creating innovative solutions for life management and digital transformation.
+          </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            <Link
+              href="https://dataversetechnologies.vercel.app/"
+              target="_blank"
+              className="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-all text-center font-semibold"
+            >
+              Visit Our Portfolio
+            </Link>
+            <Link
+              href="mailto:dataversetechnologies6@gmail.com"
+              className="flex-1 px-6 py-3 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/50 rounded-lg transition-all text-center font-semibold"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Life?</h2>

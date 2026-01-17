@@ -41,14 +41,16 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <Link
-                href="https://github.com"
+                href="https://dataversetechnologies.vercel.app/"
                 target="_blank"
+                title="Portfolio"
                 className="inline-flex items-center justify-center w-10 h-10 bg-slate-800 hover:bg-amber-500/20 border border-amber-500/30 rounded-lg transition-all"
               >
                 <Github size={18} className="text-amber-400" />
               </Link>
               <Link
-                href="mailto:support@lifesynchub.com"
+                href="mailto:dataversetechnologies6@gmail.com"
+                title="Company Email"
                 className="inline-flex items-center justify-center w-10 h-10 bg-slate-800 hover:bg-amber-500/20 border border-amber-500/30 rounded-lg transition-all"
               >
                 <Mail size={18} className="text-amber-400" />
@@ -101,7 +103,14 @@ export default function Footer() {
 
           <p className="text-slate-500 text-xs">
             Made with{" "}
-            <span className="text-red-500">❤️</span> by LifeSync Team
+            <span className="text-red-500">❤️</span> by{" "}
+            <Link
+              href="https://dataversetechnologies.vercel.app/"
+              target="_blank"
+              className="text-amber-400 hover:text-amber-300 transition-colors"
+            >
+              Dataverse Technologies
+            </Link>
           </p>
         </div>
 

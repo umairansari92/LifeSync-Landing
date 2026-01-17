@@ -55,7 +55,7 @@ const supportChannels = [
     icon: Mail,
     title: "Email Support",
     description: "Send us an email and we'll get back to you within 24 hours",
-    contact: "support@lifesynchub.com",
+    contact: "dataversetechnologies6@gmail.com",
   },
   {
     icon: MessageSquare,
@@ -192,7 +192,7 @@ export default function Support() {
               View Docs
             </Link>
             <Link
-              href="mailto:support@lifesynchub.com"
+              href="mailto:dataversetechnologies6@gmail.com"
               className="px-6 py-2 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all font-semibold"
             >
               Email Us

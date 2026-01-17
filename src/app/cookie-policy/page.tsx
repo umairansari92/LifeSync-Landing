@@ -196,8 +196,8 @@ export default function CookiePolicy() {
             <div className="mt-4 space-y-2">
               <p>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:privacy@lifesynchub.com" className="text-amber-400 hover:text-amber-300">
-                  privacy@lifesynchub.com
+                <a href="mailto:dataversetechnologies6@gmail.com" className="text-amber-400 hover:text-amber-300">
+                  dataversetechnologies6@gmail.com
                 </a>
               </p>
               <p>
