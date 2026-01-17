@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 const articles = [
   {
     id: 1,
+    slug: "financial-habits",
     title: "5 Financial Habits That Will Transform Your Life",
     excerpt:
       "Learn the proven financial habits that can help you build wealth, reduce stress, and achieve your goals faster than you thought possible.",
@@ -19,6 +20,7 @@ const articles = [
   },
   {
     id: 2,
+    slug: "productivity-hacks",
     title: "Productivity Hacks: Managing Tasks Like a Pro",
     excerpt:
       "Discover the secret techniques used by top performers to manage their tasks, prioritize effectively, and achieve more in less time.",
@@ -28,6 +30,7 @@ const articles = [
   },
   {
     id: 3,
+    slug: "spiritual-practice",
     title: "The Importance of Spiritual Practice in Daily Life",
     excerpt:
       "Explore how integrating spiritual practices into your daily routine can improve mental health, reduce anxiety, and bring more peace to your life.",
@@ -37,6 +40,7 @@ const articles = [
   },
   {
     id: 4,
+    slug: "smart-shopping",
     title: "Shopping Smart: Budget-Friendly Tips for Everyday Savings",
     excerpt:
       "Practical strategies to help you shop smarter, reduce unnecessary spending, and keep your budget under control without sacrificing quality.",
@@ -46,6 +50,7 @@ const articles = [
   },
   {
     id: 5,
+    slug: "loan-management",
     title: "Loan Management 101: Everything You Need to Know",
     excerpt:
       "A comprehensive guide to understanding loans, managing debt effectively, and building a plan to become debt-free faster.",
@@ -55,6 +60,7 @@ const articles = [
   },
   {
     id: 6,
+    slug: "habit-tracking",
     title: "Habit Tracking: The Key to Personal Transformation",
     excerpt:
       "Learn how to use habit tracking to build positive behaviors, break negative patterns, and create lasting change in your life.",
@@ -88,27 +94,29 @@ export default function Blog() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Featured Article */}
         <section className="mb-16">
-          <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg overflow-hidden">
-            <div className="p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">{articles[0].image}</span>
-                <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm font-semibold">
-                  {articles[0].category}
-                </span>
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-4">{articles[0].title}</h2>
-              <p className="text-lg text-slate-300 mb-6">{articles[0].excerpt}</p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-slate-400 text-sm">
-                  <Calendar size={16} />
-                  {articles[0].date}
+          <Link href={`/blog/${articles[0].slug}`}>
+            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all cursor-pointer group">
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">{articles[0].image}</span>
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm font-semibold">
+                    {articles[0].category}
+                  </span>
                 </div>
-                <button className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors font-semibold">
-                  Read More <ArrowRight size={18} />
-                </button>
+                <h2 className="text-3xl font-bold text-white mb-4 group-hover:text-amber-300 transition-colors">{articles[0].title}</h2>
+                <p className="text-lg text-slate-300 mb-6">{articles[0].excerpt}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-slate-400 text-sm">
+                    <Calendar size={16} />
+                    {articles[0].date}
+                  </div>
+                  <button className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors font-semibold group-hover:translate-x-1">
+                    Read More <ArrowRight size={18} />
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </section>
 
         {/* All Articles */}
@@ -116,32 +124,29 @@ export default function Blog() {
           <h2 className="text-2xl font-bold text-white mb-8">Latest Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.slice(1).map((article) => (
-              <article
-                key={article.id}
-                className="bg-slate-900/50 border border-amber-500/20 rounded-lg overflow-hidden hover:border-amber-500/40 transition-all group"
-              >
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl">{article.image}</span>
-                    <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-semibold">
-                      {article.category}
-                    </span>
+              <Link key={article.id} href={`/blog/${article.slug}`}>
+                <article className="bg-slate-900/50 border border-amber-500/20 rounded-lg overflow-hidden hover:border-amber-500/40 transition-all group cursor-pointer h-full hover:shadow-lg hover:shadow-amber-500/10">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-3xl">{article.image}</span>
+                      <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-semibold">
+                        {article.category}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-slate-400 mb-4 line-clamp-2">{article.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-slate-500 flex items-center gap-1">
+                        <Calendar size={14} />
+                        {article.date}
+                      </span>
+                      <ArrowRight size={16} className="text-amber-400 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm text-slate-400 mb-4">{article.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-slate-500 flex items-center gap-1">
-                      <Calendar size={14} />
-                      {article.date}
-                    </span>
-                    <button className="text-amber-400 hover:text-amber-300 transition-colors">
-                      <ArrowRight size={16} />
-                    </button>
-                  </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
         </section>
