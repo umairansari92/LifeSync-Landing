@@ -9,6 +9,8 @@ interface BlogPostProps {
   };
 }
 
+// Blog posts database with full content
+
 const blogPosts: Record<string, any> = {
   "financial-habits": {
     title: "Building Wealth Through Daily Money Habits",
