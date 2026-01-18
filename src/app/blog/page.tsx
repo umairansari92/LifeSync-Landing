@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
 
@@ -40,9 +41,16 @@ export default function Blog() {
         <section className="mb-16">
           <Link href={`/blog/${articles[0].slug}`}>
             <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all cursor-pointer group">
+              <div className="relative h-64 w-full border-b border-amber-500/20">
+                <Image
+                  src={articles[0].image}
+                  alt={articles[0].title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{articles[0].image}</span>
                   <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm font-semibold">
                     {articles[0].category}
                   </span>
@@ -70,9 +78,16 @@ export default function Blog() {
             {articles.slice(1).map((article) => (
               <Link key={article.id} href={`/blog/${article.slug}`}>
                 <article className="bg-slate-900/50 border border-amber-500/20 rounded-lg overflow-hidden hover:border-amber-500/40 transition-all group cursor-pointer h-full hover:shadow-lg hover:shadow-amber-500/10">
+                  <div className="relative h-48 w-full border-b border-amber-500/20">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl">{article.image}</span>
                       <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-semibold">
                         {article.category}
                       </span>

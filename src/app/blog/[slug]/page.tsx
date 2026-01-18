@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, User, Share2, ArrowRight } from "lucide-react";
 
 import { blogPosts } from "@/lib/blog-data";
@@ -86,8 +87,14 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="bg-slate-900/50 border border-amber-500/20 rounded-lg overflow-hidden">
           {/* Featured Image */}
-          <div className="h-96 bg-gradient-to-br from-amber-500/20 to-amber-500/5 flex items-center justify-center">
-            <span className="text-9xl">{post.emoji}</span>
+          <div className="relative h-96 w-full bg-slate-900 border-b border-amber-500/20">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
 
           {/* Article Body */}
@@ -159,9 +166,16 @@ export default async function BlogPost({ params }: BlogPostProps) {
                   href={`/blog/${slug}`}
                   className="group bg-slate-900/50 border border-amber-500/20 rounded-lg overflow-hidden hover:border-amber-500/40 transition-all"
                 >
+                  <div className="relative h-48 w-full border-b border-amber-500/20">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl">{article.emoji}</span>
                       <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-semibold">
                         {article.category}
                       </span>

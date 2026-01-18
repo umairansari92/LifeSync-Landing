@@ -18,7 +18,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: "January 18, 2026",
     category: "Finance",
     emoji: "💰",
-    image: "💰",
+    image: "/Financial Habits.png",
     excerpt: "“Pay yourself first.” That short line sums up decades of advice from investors and personal finance experts. These are not tricks. They are repeatable habits that produce results.",
     content: `
 “Pay yourself first.” That short line sums up decades of advice from investors and personal finance experts. Warren Buffett famously framed saving as a first action, not an afterthought. Other experts repeat the same core ideas in different words: track your spending, automate savings, and review your money on a schedule. These are not tricks. They are repeatable habits that produce results.
@@ -148,7 +148,7 @@ Experts agree. The core of financial wellbeing is routine, not luck. Track, save
     date: "January 10, 2026",
     category: "Productivity",
     emoji: "⚡",
-    image: "⚡",
+    image: "/Productivity Hacks.png",
     excerpt: "“Deep work is the ability to focus without distraction.” Cal Newport’s philosophy reshaped modern work. Learn how to stop being 'busy' and start being productive.",
     content: `
 “Deep work is the ability to focus without distraction on a cognitively demanding task.” That definition from Cal Newport, author of *Deep Work*, highlights the crisis of the modern worker. We are constantly busy but rarely productive. The notifications, the switching costs, and the "shallow work" of emails eat up our potential.
@@ -223,7 +223,7 @@ Busyness is a trap. Productivity is a discipline. Use time blocking, capture sma
     date: "January 5, 2026",
     category: "Spirituality",
     emoji: "🙏",
-    image: "🙏",
+    image: "/Spiritual Practice.png",
     excerpt: "“With the new day comes new strength.” Eleanor Roosevelt’s wisdom aligns with modern mindfulness. A consistent morning routine reduces anxiety and builds resilience.",
     content: `
 "The morning is the most important part of the day because it defines how the rest will unfold." Spiritual teachers and psychologists agree: the first hour of your day sets the thermostat for your emotional state. If you start with chaos, you invite anxiety. If you start with intention, you invite peace.
@@ -298,7 +298,7 @@ Your morning is your foundation. Build it on rock, not sand. Incorporate silence
     date: "December 28, 2025",
     category: "Lifestyle",
     emoji: "🛒",
-    image: "🛒",
+    image: "/Smart Shopping.png",
     excerpt: "“Do not save what is left after spending.” Warren Buffett’s rule is simple but hard to follow. Retailers use psychology to make you buy. Here is how to fight back.",
     content: `
 "If you buy things you do not need, soon you will have to sell things you need." Warren Buffett’s warning is stark. We live in an economy designed to separate us from our money. From "limited time offers" to one-click checkouts, friction has been removed from spending.
@@ -373,7 +373,7 @@ Marketing is powerful, but a plan is stronger. Use the 24-hour rule, never shop 
     date: "December 20, 2025",
     category: "Finance",
     emoji: "🏦",
-    image: "🏦",
+    image: "/Loan Management.png",
     excerpt: "Dave Ramsey says maximizing behavior matters more than math. Mathematicians start with interest rates. Which method works for you? We break down the expert debate.",
     content: `
 "Personal finance is only 20% head knowledge. It's 80% behavior." This quote from Dave Ramsey defines the central debate in debt payoff. Should you trust the math (Avalanche) or trust your psychology (Snowball)?
@@ -440,7 +440,7 @@ Don't let debt sit in the dark. Choose your weapon (Snowball or Avalanche), load
     date: "December 15, 2025",
     category: "Growth",
     emoji: "📈",
-    image: "📈",
+    image: "/Habit Tracking.png",
     excerpt: "“You do not rise to the level of your goals. You fall to the level of your systems.” James Clear’s bestseller changed how we view habits. LifeSync is that system.",
     content: `
 "Success is the product of daily habits—not once-in-a-lifetime transformations." James Clear, author of *Atomic Habits*, shifted the world’s focus from "goals" to "systems." We all want to be fit, rich, and wise (goals). But only those with a routine (system) get there.
