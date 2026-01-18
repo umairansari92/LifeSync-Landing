@@ -1,74 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, ArrowRight } from "lucide-react";
+import { blogPosts } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
   title: "LifeSync Blog - Tips, Updates & Stories",
   description: "Read our latest articles about personal finance, productivity, and life management.",
 };
 
-const articles = [
-  {
-    id: 1,
-    slug: "financial-habits",
-    title: "5 Financial Habits Experts Swear By, Why They Work, and How LifeSync Makes Them Stick",
-    excerpt:
-      "“Pay yourself first.” That short line sums up decades of advice from investors and personal finance experts. These are not tricks. They are repeatable habits that produce results.",
-    date: "January 18, 2026",
-    category: "Finance",
-    image: "💰",
-  },
-  {
-    id: 2,
-    slug: "productivity-hacks",
-    title: "4 Productivity Hacks High Performers Use, Why They Work, and How LifeSync Simplifies Them",
-    excerpt:
-      "“Deep work is the ability to focus without distraction.” Cal Newport’s philosophy reshaped modern work. Learn how to stop being 'busy' and start being productive.",
-    date: "January 10, 2026",
-    category: "Productivity",
-    image: "⚡",
-  },
-  {
-    id: 3,
-    slug: "spiritual-practice",
-    title: "The Science of Spiritual Mornings: Why Experts Vouch for Them and How LifeSync Helps",
-    excerpt:
-      "“With the new day comes new strength.” Eleanor Roosevelt’s wisdom aligns with modern mindfulness. A consistent morning routine reduces anxiety and builds resilience.",
-    date: "January 5, 2026",
-    category: "Spirituality",
-    image: "🙏",
-  },
-  {
-    id: 4,
-    slug: "smart-shopping",
-    title: "How to Stop Impulse Buying: Expert Spending Rules and How LifeSync Enforces Them",
-    excerpt:
-      "“Do not save what is left after spending.” Warren Buffett’s rule is simple but hard to follow. Retailers use psychology to make you buy. Here is how to fight back.",
-    date: "December 28, 2025",
-    category: "Lifestyle",
-    image: "🛍️",
-  },
-  {
-    id: 5,
-    slug: "loan-management",
-    title: "Snowball vs. Avalanche: The Expert Guide to Debt Freedom with LifeSync",
-    excerpt:
-      "Dave Ramsey says maximizing behavior matters more than math. Mathematicians start with interest rates. Which method works for you? We break down the expert debate.",
-    date: "December 20, 2025",
-    category: "Finance",
-    image: "🏦",
-  },
-  {
-    id: 6,
-    slug: "habit-tracking",
-    title: "The “Atomic Habits” Framework: How to Build Consistency with LifeSync",
-    excerpt:
-      "“You do not rise to the level of your goals. You fall to the level of your systems.” James Clear’s bestseller changed how we view habits. LifeSync is that system.",
-    date: "December 15, 2025",
-    category: "Growth",
-    image: "📊",
-  },
-];
+const articles = Object.entries(blogPosts).map(([slug, post], index) => ({
+  id: index + 1,
+  slug,
+  ...post,
+}));
 
 export default function Blog() {
   return (

@@ -1,6 +1,14 @@
 import { MetadataRoute } from "next";
+import { blogPosts } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const blogEntries: MetadataRoute.Sitemap = Object.keys(blogPosts).map((slug) => ({
+    url: `https://lifesynchub.vercel.app/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
   return [
     {
       url: "https://lifesynchub.vercel.app",
@@ -32,5 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...blogEntries,
   ];
 }
