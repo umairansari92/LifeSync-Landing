@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Github, ExternalLink } from "lucide-react";
+import { Mail, Globe, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -46,7 +46,7 @@ export default function Footer() {
                 title="Company Website"
                 className="inline-flex items-center justify-center w-10 h-10 bg-slate-800 hover:bg-amber-500/20 border border-amber-500/30 rounded-lg transition-all"
               >
-                <Github size={18} className="text-amber-400" />
+                <Globe size={18} className="text-amber-400" />
               </Link>
               <Link
                 href="mailto:dataversetechnologies6@gmail.com"
