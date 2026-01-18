@@ -124,7 +124,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#f5c542" />
         
         {/* Favicon & App Icons */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo DataVerse.jpg" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         
