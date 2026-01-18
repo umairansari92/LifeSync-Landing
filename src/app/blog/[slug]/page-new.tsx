@@ -1098,7 +1098,7 @@ export default function BlogPost({ params }: BlogPostProps) {
         </article>
 
         {/* Share Section */}
-        <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-6 mb-12">
+        <div className="bg-linear-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-6 mb-12">
           <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
             <Share2 size={20} />
             Share This Article
@@ -1135,7 +1135,7 @@ export default function BlogPost({ params }: BlogPostProps) {
                   <Link
                     key={slug}
                     href={`/blog/${slug}`}
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/20 hover:border-amber-500/50 rounded-lg p-6 transition-all"
+                    className="group bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/20 hover:border-amber-500/50 rounded-lg p-6 transition-all"
                   >
                     <div className="flex items-start gap-4">
                       <span className="text-3xl">{relatedPost.image}</span>

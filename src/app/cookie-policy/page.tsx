@@ -188,7 +188,7 @@ export default function CookiePolicy() {
           </section>
 
           {/* Contact Us */}
-          <section className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-6">
+          <section className="bg-linear-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-6">
             <h2 className="text-2xl font-bold text-white mb-4">Questions About This Policy?</h2>
             <p>
               If you have any questions about our use of cookies or this Cookie Policy, please contact us at:

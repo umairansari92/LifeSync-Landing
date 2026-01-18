@@ -102,7 +102,7 @@ export default function Support() {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-6"
+                  className="bg-linear-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-6"
                 >
                   <Icon className="text-amber-400 mb-4" size={32} />
                   <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
@@ -146,7 +146,7 @@ export default function Support() {
             ></textarea>
             <button
               type="submit"
-              className="px-8 py-3 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+              className="px-8 py-3 bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
             >
               Send Message
             </button>
@@ -178,7 +178,7 @@ export default function Support() {
         </section>
 
         {/* Additional Help */}
-        <section className="mt-16 bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8">
+        <section className="mt-16 bg-linear-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8">
           <h2 className="text-2xl font-bold text-white mb-4">Still need help?</h2>
           <p className="text-slate-300 mb-6">
             Our support team is ready to assist you. Check out our knowledge base or contact us directly.
@@ -193,7 +193,7 @@ export default function Support() {
             </Link>
             <Link
               href="mailto:dataversetechnologies6@gmail.com"
-              className="px-6 py-2 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all font-semibold"
+              className="px-6 py-2 bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all font-semibold"
             >
               Email Us
             </Link>

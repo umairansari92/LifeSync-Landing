@@ -86,7 +86,7 @@ export default function CTA() {
     <section className="py-20 px-4 bg-slate-950">
       <div className="max-w-6xl mx-auto">
         {/* Main CTA */}
-        <div className="bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/50 rounded-2xl p-12 md:p-16 text-center">
+        <div className="bg-linear-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/50 rounded-2xl p-12 md:p-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Life?
           </h2>
@@ -100,7 +100,7 @@ export default function CTA() {
             <button
               onClick={handleStartFree}
               disabled={openingApp}
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 disabled:from-amber-400/50 disabled:to-amber-500/50 text-black font-bold px-8 py-4 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-amber-500/50 disabled:scale-100 disabled:cursor-not-allowed"
+              className="inline-flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 disabled:from-amber-400/50 disabled:to-amber-500/50 text-black font-bold px-8 py-4 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-amber-500/50 disabled:scale-100 disabled:cursor-not-allowed"
             >
               {openingApp ? (
                 <>

@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-200 mb-4">
+            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-amber-300 to-amber-200 mb-4">
               LifeSync
             </h3>
             <p className="text-slate-400 text-sm mb-4">
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="mt-12 bg-gradient-to-r from-amber-500/10 to-amber-400/10 border border-amber-500/30 rounded-xl p-6 text-center">
+        <div className="mt-12 bg-linear-to-r from-amber-500/10 to-amber-400/10 border border-amber-500/30 rounded-xl p-6 text-center">
           <h3 className="text-lg font-bold text-white mb-2">
             Stay Updated
           </h3>
@@ -128,7 +128,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
             />
-            <button className="px-6 py-2 bg-gradient-to-r from-amber-400 to-amber-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all">
+            <button className="px-6 py-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all">
               Subscribe
             </button>
           </div>

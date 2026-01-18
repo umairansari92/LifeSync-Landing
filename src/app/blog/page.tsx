@@ -40,7 +40,7 @@ export default function Blog() {
         {/* Featured Article */}
         <section className="mb-16">
           <Link href={`/blog/${articles[0].slug}`}>
-            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all cursor-pointer group">
+            <div className="bg-linear-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all cursor-pointer group">
               <div className="relative h-64 w-full border-b border-amber-500/20">
                 <Image
                   src={articles[0].image}
@@ -111,7 +111,7 @@ export default function Blog() {
         </section>
 
         {/* Newsletter CTA */}
-        <section className="mt-16 bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8">
+        <section className="mt-16 bg-linear-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8">
           <h2 className="text-2xl font-bold text-white mb-3">Subscribe to Our Newsletter</h2>
           <p className="text-slate-300 mb-6">
             Get the latest tips, updates, and exclusive stories delivered to your inbox every week.
@@ -125,7 +125,7 @@ export default function Blog() {
             />
             <button
               type="submit"
-              className="px-6 py-2 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+              className="px-6 py-2 bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
             >
               Subscribe
             </button>

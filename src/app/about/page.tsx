@@ -90,7 +90,7 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8"
+                  className="bg-linear-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8"
                 >
                   <Icon className="text-amber-400 mb-4" size={32} />
                   <h3 className="text-xl font-bold text-white mb-3">
@@ -183,9 +183,9 @@ export default function About() {
         </section>
 
         {/* Built By Section */}
-        <section className="mb-20 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/20 rounded-lg p-8">
+        <section className="mb-20 bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/20 rounded-lg p-8">
           <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Image
                 src="/logo dataverse.jpg"
                 alt="LifeSync Logo"
@@ -270,7 +270,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8 text-center">
+        <section className="bg-linear-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Transform Your Life?
           </h2>
@@ -281,7 +281,7 @@ export default function About() {
           <Link
             href="https://app-lifesynchub.vercel.app/register"
             target="_blank"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+            className="inline-block px-8 py-3 bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
           >
             Start Free Today
           </Link>
