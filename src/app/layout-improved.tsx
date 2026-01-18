@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -118,7 +119,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
         <meta name="theme-color" content="#f5c542" />
         <meta name="msapplication-TileColor" content="#f5c542" />
         
@@ -143,28 +144,24 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-slate-950 text-white`}>
         <Navbar />
-        <div className="pt-16">
-          {children}
-        </div>
-        
-        {/* Google Analytics - Add your GA ID */}
-        <script
-          async
+        <div className="pt-16">{children}</div>
+
+        {/* Google Analytics */}
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"
+          strategy="afterInteractive"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'YOUR_GA_ID', {
-                page_path: window.location.pathname,
-                send_page_view: true,
-              });
-            `,
-          }}
-        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'YOUR_GA_ID', {
+              page_path: window.location.pathname,
+              send_page_view: true,
+            });
+          `}
+        </Script>
       </body>
     </html>
   );
