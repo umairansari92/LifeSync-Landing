@@ -51,7 +51,6 @@ const screenshots = [
     title: "Loan Manager",
     description: "Track borrowing and lending with detailed transaction history",
     image: "/Loan.png",
-    image2: "/Loan2.png",
     category: "Finance"
   },
   {
