@@ -29,7 +29,7 @@ const screenshots = [
     id: 4,
     title: "Daily Task Planner",
     description: "Organize your day with smart task management and progress tracking",
-    image: "/Habit Tracking.png",
+    image: "/Planner.png",
     category: "Productivity"
   },
   {
@@ -43,14 +43,15 @@ const screenshots = [
     id: 6,
     title: "Shopping Lists",
     description: "Plan your shopping with item tracking and price calculations",
-    image: "/Smart Shopping.png",
+    image: "/Shopping.png",
     category: "Finance"
   },
   {
     id: 7,
     title: "Loan Manager",
     description: "Track borrowing and lending with detailed transaction history",
-    image: "/Loan Management.png",
+    image: "/Loan.png",
+    image2: "/Loan2.png",
     category: "Finance"
   },
   {
