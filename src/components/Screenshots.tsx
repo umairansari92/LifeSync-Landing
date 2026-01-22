@@ -8,7 +8,7 @@ const screenshots = [
     id: 1,
     title: "Dashboard Overview",
     description: "Get a complete overview with KPI cards, prayer tracker, and expense charts - all in one place",
-    image: "/screenshots/dashboard.png", // You'll add these images
+    image: "/public/screenshots/dashboard.png",// You'll add these images
     category: "Core"
   },
   {
