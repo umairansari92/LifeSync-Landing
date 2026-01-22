@@ -8,63 +8,63 @@ const screenshots = [
     id: 1,
     title: "Dashboard Overview",
     description: "Get a complete overview with KPI cards, prayer tracker, and expense charts - all in one place",
-    image: "/public/screenshots/dashboard.png",// You'll add these images
+    image: "/Dashboard.png",
     category: "Core"
   },
   {
     id: 2,
     title: "Expense Tracking",
     description: "Track every expense with smart categorization and day-wise breakdown",
-    image: "/screenshots/expenses.png",
+    image: "/Expense.png",
     category: "Finance"
   },
   {
     id: 3,
     title: "Prayer Times & Tracker",
     description: "Never miss a prayer with accurate times and live countdown",
-    image: "/screenshots/prayer.png",
+    image: "/Prayer.png",
     category: "Spiritual"
   },
   {
     id: 4,
     title: "Daily Task Planner",
     description: "Organize your day with smart task management and progress tracking",
-    image: "/screenshots/tasks.png",
+    image: "/Habit Tracking.png",
     category: "Productivity"
   },
   {
     id: 5,
     title: "Rich Text Notes",
     description: "Write beautiful notes with formatting, colors, and organization",
-    image: "/screenshots/notes.png",
+    image: "/Notes.png",
     category: "Productivity"
   },
   {
     id: 6,
     title: "Shopping Lists",
     description: "Plan your shopping with item tracking and price calculations",
-    image: "/screenshots/shopping.png",
+    image: "/Smart Shopping.png",
     category: "Finance"
   },
   {
     id: 7,
     title: "Loan Manager",
     description: "Track borrowing and lending with detailed transaction history",
-    image: "/screenshots/loans.png",
+    image: "/Loan Management.png",
     category: "Finance"
   },
   {
     id: 8,
     title: "Beautiful Themes",
     description: "Dark mode (Black Gold) and Light mode (Steel Silver) - choose your style",
-    image: "/screenshots/themes.png",
+    image: "/Financial Habits.png",
     category: "Design"
   },
   {
     id: 9,
     title: "Mobile Responsive",
     description: "Works perfectly on all devices - phone, tablet, or desktop",
-    image: "/screenshots/mobile.png",
+    image: "/Productivity Hacks.png",
     category: "Design"
   }
 ];
@@ -129,13 +129,13 @@ export default function Screenshots() {
               onClick={() => setSelectedImage(index)}
               className="group relative bg-slate-800/50 rounded-xl overflow-hidden border border-amber-500/20 hover:border-amber-400/50 transition-all cursor-pointer hover:scale-105"
             >
-              {/* Image Placeholder - Replace with actual screenshots */}
-              <div className="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="text-6xl mb-4">📸</div>
-                  <p className="text-amber-400 font-semibold">{screenshot.title}</p>
-                  <p className="text-slate-500 text-sm mt-2">Screenshot coming soon</p>
-                </div>
+              {/* Screenshot Image */}
+              <div className="aspect-video relative">
+                <img
+                  src={screenshot.image}
+                  alt={screenshot.title}
+                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                />
               </div>
 
               {/* Overlay */}
@@ -195,17 +195,12 @@ export default function Screenshots() {
 
             {/* Image */}
             <div className="max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
-              <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg aspect-video flex items-center justify-center">
-                <div className="text-center p-12">
-                  <div className="text-8xl mb-6">📸</div>
-                  <h3 className="text-amber-400 text-2xl font-bold mb-4">
-                    {filteredScreenshots[selectedImage].title}
-                  </h3>
-                  <p className="text-slate-300 text-lg">
-                    {filteredScreenshots[selectedImage].description}
-                  </p>
-                  <p className="text-slate-500 mt-4">Screenshot will be displayed here</p>
-                </div>
+              <div className="bg-slate-800 rounded-lg overflow-hidden aspect-video flex items-center justify-center border border-amber-500/30 shadow-2xl shadow-amber-500/20">
+                <img
+                  src={filteredScreenshots[selectedImage].image}
+                  alt={filteredScreenshots[selectedImage].title}
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* Caption */}
